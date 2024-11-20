@@ -12,5 +12,4 @@ def longestcommonprefix(strs):
     return s[:i]
         
 strs = ["flower","flow","flight"]
-#strs = ["dog", "racecar", "car"]
 print(longestcommonprefix(strs))
