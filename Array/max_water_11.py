@@ -1,3 +1,14 @@
+# Algorithm Explanation:
+# Problem: Given an array of heights, find two lines that together with the x-axis form a container, such that the container holds the most water.
+# Approach:
+# 1. Use two pointers, one at the start (left) and one at the end (right) of the array.
+# 2. Calculate the area formed by the lines at the left and right pointers.
+#    - Area = min(height[left], height[right]) * (right - left)
+# 3. Update the maximum area found so far.
+# 4. Move the pointer at the shorter line inward, hoping to find a taller line and possibly a larger area.
+# 5. Repeat until the pointers meet.
+# 6. Return the maximum area found.
+
 def maxArea(height):
     left = 0
     right = len(height) - 1

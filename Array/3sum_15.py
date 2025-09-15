@@ -1,3 +1,15 @@
+# Algorithm Explanation:
+# Problem: Given an array, find all unique triplets that sum to zero.
+# Approach:
+# 1. Sort the array to make it easier to avoid duplicates and use two pointers.
+# 2. Loop through each number as the first element of the triplet.
+#    - Skip duplicate first elements to avoid duplicate triplets.
+# 3. For each first element, use two pointers (left and right) to find pairs that sum with the first element to zero.
+#    - If the sum is zero, add the triplet to the result and move both pointers, skipping duplicates.
+#    - If the sum is less than zero, move the left pointer right to increase the sum.
+#    - If the sum is greater than zero, move the right pointer left to decrease the sum.
+# 4. Continue until all unique triplets are found and return the result.
+
 def threeSum(nums):
     nums.sort()
     result = []

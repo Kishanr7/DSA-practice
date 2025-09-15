@@ -1,3 +1,13 @@
+# Algorithm Explanation:
+# Problem: Given n stairs, you can climb 1 or 2 stairs at a time. Find the number of distinct ways to reach the top.
+# Approach:
+# 1. If n == 1 or n == 2, return n (base cases).
+# 2. Use dynamic programming to store the number of ways to reach each stair.
+# 3. For each stair i from 3 to n:
+#    - The number of ways to reach i is the sum of ways to reach (i-1) and (i-2).
+#    - This is because you can reach stair i from either (i-1) by taking 1 step or from (i-2) by taking 2 steps.
+# 4. Return the number of ways to reach the nth stair.
+
 def climbStairs(n):
     if n == 1:
         return 1

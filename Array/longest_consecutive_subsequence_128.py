@@ -1,3 +1,13 @@
+# Algorithm Explanation:
+# Problem: Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
+# Approach:
+# 1. Convert the array to a set for O(1) lookups.
+# 2. Iterate through each number in the set:
+#    - If the number is the start of a sequence (num - 1 not in set), begin counting.
+#    - Continue to check for consecutive numbers (num + 1, num + 2, ...) and count the streak.
+#    - Update the longest streak found.
+# 3. Return the length of the longest consecutive sequence.
+
 def longestConsecutive(nums):
     num_set = set(nums)
     longest_streak = 0
