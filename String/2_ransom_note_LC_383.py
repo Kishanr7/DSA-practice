@@ -1,3 +1,13 @@
+# Algorithm Explanation:
+# Problem: Given two strings, ransom and magazine, determine if ransom can be constructed from magazine.
+# Each letter in magazine can only be used once in ransom.
+# Approach:
+# 1. Create a hashmap (dictionary) for both ransom and magazine to count the occurrences of each character.
+# 2. For each character in ransom's hashmap:
+#    - Check if the character exists in magazine's hashmap and if magazine has at least as many occurrences as needed.
+#    - If all characters in ransom are sufficiently present in magazine, return True.
+#    - Otherwise, return False.
+
 def can_construct(ransom, magazine):
     r_hash = create_hashmap(ransom)
     m_hash = create_hashmap(magazine)

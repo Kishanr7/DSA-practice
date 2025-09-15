@@ -1,3 +1,15 @@
+# Algorithm Explanation:
+# Problem: Given a circular array 'code' and an integer k, replace each element with the sum of the next k elements (if k > 0) or previous k elements (if k < 0). If k == 0, replace all elements with 0.
+# Approach:
+# 1. If k == 0, return an array of zeros with the same length as code.
+# 2. If k > 0:
+#    - For each index i, create a rotated version of code starting at i.
+#    - Sum the next k elements (positions 1 to k in the rotated list) and assign to decrypted_code[i].
+# 3. If k < 0:
+#    - For each index i, create a rotated version of code starting at i.
+#    - Sum the previous k elements (using negative indexing) and assign to decrypted_code[i].
+# 4. Return the decrypted_code array.
+
 def decrypt(code, k):
     decrypted_code=[None]*len(code)
     if k == 0:
