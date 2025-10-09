@@ -7,7 +7,8 @@
 #    - If nums1[x] > nums2[y], place nums1[x] at nums1[z] and move x backward.
 #    - Else, place nums2[y] at nums1[z] and move y backward.
 # 4. If nums2 still has elements left after nums1 is exhausted, copy them into nums1.
-# 5. Return the merged array.
+# 5. Return the merged array. 
+# https://www.youtube.com/watch?v=0-KuWOcHZuk
 
 def merge(nums1,m,nums2,n):
     x, y = m-1, n-1
